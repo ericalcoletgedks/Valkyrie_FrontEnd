@@ -37,7 +37,7 @@ export const AuthLayout = () => {
                                 <div className="flex flex-col gap-3 sm:flex-row items-center text-white/80 text-sm w-full p-8 justify-between">
                                     <p>&copy; Developed by Eric Alcoletge</p>
                                     <div className="flex items-center gap-5">
-                                        <a className="hover:underline" href="https://www.linkedin.com/in/eric-alcoletge-oliv%C3%A9-7718b5283/" target="_blank">Web</a> <SparkleIcon weight="fill" />
+                                        <a className="hover:underline" href="https://ealcoletge.netlify.app/" target="_blank">Web</a> <SparkleIcon weight="fill" />
                                         <a className="hover:underline" href="https://www.linkedin.com/in/eric-alcoletge-oliv%C3%A9-7718b5283/" target="_blank">Linkedin</a> <SparkleIcon weight="fill" />
                                         <a className="hover:underline" href="mailto:ealcoletge@outlook.es">Contact me</a>
                                     </div>
