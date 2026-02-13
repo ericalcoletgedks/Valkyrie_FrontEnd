@@ -1,5 +1,6 @@
 import { login } from "@/api/Auth";
 import { ErrorMessage } from "@/components/ErrorMessage";
+import { Spinner } from "@/components/Spinner";
 import type { UserLoginForm } from "@/types/index"
 import { SignInIcon } from "@phosphor-icons/react"
 import { useMutation } from "@tanstack/react-query";
@@ -13,7 +14,7 @@ export const LoginView = () => {
     const initialValues: UserLoginForm = {} as UserLoginForm;
     const { register, handleSubmit, formState: { errors } } = useForm({ defaultValues: initialValues });
 
-    const { mutate } = useMutation({
+    const { mutate, status } = useMutation({
         mutationFn: login,
         onError: (error) => {
             toast.error(error.message)
@@ -79,7 +80,9 @@ export const LoginView = () => {
 
                 <div className="mt-5 flex items-center gap-2">
                     <Link to={'/auth/register'} className="flex items-center gap-2 justify-center w-full p-2 rounded-lg border border-(--border) cursor-pointer hover:bg-(--hover) transition-all">Create account</Link>
-                    <button className="flex items-center gap-2 justify-center w-full p-2 rounded-lg bg-(--white) text-(--black) border border-(--border) cursor-pointer hover:bg-(--white)/80 transition-all">Log in <SignInIcon /></button>
+                    <button className="flex items-center gap-2 justify-center w-full p-2 rounded-lg bg-(--white) text-(--black) border border-(--border) cursor-pointer hover:bg-(--white)/80 transition-all"> 
+                    { status === 'pending' ? <Spinner /> : (<> <SignInIcon /> Login</>) }
+                    </button>
                 </div>
 
                 <div className='w-full mt-5 text-center'>

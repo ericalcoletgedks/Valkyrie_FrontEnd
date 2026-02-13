@@ -13,17 +13,16 @@ import { Flip, ToastContainer } from "react-toastify";
 export const AuthLayout = () => {
 
     const location = useLocation();
-    console.log(location.pathname)
 
     return (
         <>
             <div className="flex flex-col xl:flex-row min-h-screen bg-(--bg)">
                 <div className="relative xl:w-[40%] h-screen">
-                    <img src="/auth-bg2.jpg" alt="" className="p-3 overflow-hidden rounded-4xl xl:rounded-tr-none w-screen h-screen object-cover brightness-50" />
+                    <img src="/auth-bg2.webp" alt="" className="p-3 overflow-hidden rounded-4xl xl:rounded-tr-none w-screen h-screen object-cover brightness-50" />
                     <div className="absolute top-0 w-full h-full">
                         <div className="flex flex-col items-center w-full h-full justify-between">
 
-                            <img src="/Valkyrie_white2.png" alt="" className='h-30 w-30 mt-3 overflow-hidden' />
+                            <img src="/Valkyrie_white2.png" alt="" className='h-30 w-30 mt-6 overflow-hidden' />
 
                             {location.pathname === '/auth/new-password' ?
                                 <a href="#content" className="xl:hidden p-2 px-15 rounded-lg backdrop-blur-3xl text-white border border-white">Change password</a>
