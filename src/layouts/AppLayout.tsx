@@ -39,9 +39,9 @@ export default function AppLayout() {
     )
   } else {
     return (
-      <div className="flex items-center justify-center h-screen">
-
+      <div className="flex flex-col items-center justify-center h-dvh">
         <SquareSpinner />
+        <p className="text-(--white)/50 text-sm text-center p-4">The server is starting. This may take a few seconds if it was inactive. Thank you for your patience.</p>
       </div>
     );
   };
