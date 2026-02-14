@@ -16,9 +16,9 @@ export const AuthLayout = () => {
 
     return (
         <>
-            <div className="flex flex-col xl:flex-row min-h-screen bg-(--bg)">
-                <div className="relative xl:w-[40%] h-screen">
-                    <img src="/auth-bg2.webp" alt="" className="p-3 overflow-hidden rounded-4xl xl:rounded-tr-none w-screen h-screen object-cover brightness-50" />
+            <div className="flex flex-col xl:flex-row min-h-dvh bg-(--bg)">
+                <div className="relative xl:w-[40%] h-dvh">
+                    <img src="/auth-bg2.webp" alt="" className="p-3 overflow-hidden rounded-4xl xl:rounded-tr-none w-screen h-dvh object-cover brightness-50" />
                     <div className="absolute top-0 w-full h-full">
                         <div className="flex flex-col items-center w-full h-full justify-between">
 
@@ -48,7 +48,7 @@ export const AuthLayout = () => {
                     </div>
                 </div>
 
-                <div id="content" className="flex m-auto px-3 xl:w-[60%] h-screen xl:h-auto overflow-y-scroll">
+                <div id="content" className="flex m-auto px-3 xl:w-[60%] h-dvh xl:h-auto overflow-y-scroll">
                     <div className='max-w-xs xl:w-md m-auto xl:max-w-md'>
                         {location.pathname === '/auth/login' && <AuthHeader />}
                         {location.pathname === '/auth/register' && <AuthHeader />}

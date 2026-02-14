@@ -16,7 +16,7 @@ export default function AppLayout() {
 
   if (!isLoading && data) {
     return (
-      <div className="h-screen grid grid-rows-[auto_1fr_auto]">
+      <div className="h-dvh grid grid-rows-[auto_1fr_auto]">
         <Header />
 
         <main className="bg-(--bg) py-10 px-5 2xl:px-60 overflow-auto transition-all duration-300 ease-in-out">
